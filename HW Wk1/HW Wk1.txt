@@ -1,0 +1,75 @@
+The ULTIMATE CS Cheatsheet 
+
+WORLD 1: Concrete structures inside the language
+
+LEVEL 1: The beginning of it all
+
+Arrays
+
+An array (or 'list') is a data structure that allows storage of multiple objects.
+It works with simple operations such as adding, retrieving, and deleting elements.
+On its own it is simple, but this is the foundation to a lot of the next few data structures.
+
+Before we see what more we can do with arrays, let us actually look at one more quick structure that lots, if not all, future structures use.
+
+Pointers
+
+A pointer is a structure that simply references another location in memory.
+It doesn't really have operations, but instead it merges with a data structure with functions (like arrays) to create special combinations.
+
+Now we can level up.
+
+LEVEL 2: Direct derivations/dependancies from Level 1
+
+Linked list
+
+A linked list is an array where elements are not stored next to each other in memory, but are instead chained together using pointers.
+It works with similar operations to the humble list, but instead it dynamically allocates memory by linking its elements (as they are in a nonlinear order)
+It is mainly use to not require a block of space in memory like arrays do, but it also provides the foundation for more advanced structures like the stack and queue.
+
+Hash Table/Dictionary
+
+Ah, the humble hash table. It actually has a lot of uses for what it is.
+It is quite an advanced array, because it stores array indices (or 'keys') and uses a mathematical formula to quickly and efficiently find the value associated to the specific key.
+It works with, once again, simple operations such as insertion and deletion. The difference is that since it uses a mathematical formula to find the value, two keys can clash, and therefore it dynamically resolves that.
+It is used in the cases where it is critical for item lookup to be as fast as possible (as it becomes O(1) time compared to usual slow O(n)), but it itself provides the basis to sets.
+
+And that concludes our whistle-stop tour of Level 2! Now for the abstract concepts in the next.
+
+LEVEL 3: Structures defined by concepts, instead of new components
+
+This is the real meat. We're getting into the likes of sets, stacks, queues and deques.  For those wanting trees, that comes a lot later as even MORE just a concept, as those in the next World 2 (including Trees) do not even have their own structures - instead, they're defined using the previous structures from Levels 1-4.
+
+Stack
+
+A stack is a linked list which has a strict insertion, deletion, and lookup order.
+All of its operations are last in, first out (LIFO).
+All elements are inserted, deleted, and looked up at the end of the structure.
+It is useful for certain tasks such as tracking the largest element after the kth element (using a monotonic stack), and tracking the history of past elements.
+
+Set
+
+A set is a hash table that simply uses only the keys for efficient operations.
+Much of the operations to a hash table remain identical, but it also dynamically detects and removes duplicate elements.
+This structure is used for counting unique elements in a list (as it removes duplicates) and also forms the basis of the Multiset.
+
+Queue
+
+This is a very commonly used linked list structure where it follows a first in, first out (FIFO), much like a real queue would.
+Elements are inserted at the end of the structure but looked up and deleted at the beginning. Once again, like a queue.
+It is useful for processing nodes in a tree or a graph, such as in algorithms like BFS.
+
+LEVEL 4: Subderivations of Level 3
+
+This section is very short as it simply contains structures that are almost identical to Level 3, except with minimal changes.
+
+Deque
+
+This is a queue that can insert, lookup, and delete elements on both ends.
+This structure also used for BFS.
+
+Multiset
+
+This is a set that handles multiple copies of the same element. Enough said.
+
+(I ran out of time, I will write World 2 later)
