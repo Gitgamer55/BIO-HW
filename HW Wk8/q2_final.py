@@ -9,6 +9,7 @@ def dp(amount, coins):
     memo[amount] = sum
     return sum
 
+
 lst = list(map(int, input().split()))
 target = int(input())
 dp(target, lst)
